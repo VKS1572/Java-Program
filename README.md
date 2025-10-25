@@ -1,2 +1,2 @@
 # Java-Program
-java problems sol
+java problems solution

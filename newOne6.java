@@ -2,11 +2,12 @@
 
 import java.util.*;
 
-class Solution {
-    public int maxPerformance(int n, int[] speed, int[] efficiency, int k) {
+public class Main {
+
+    public static int maxPerformance(int n, int[] speed, int[] efficiency, int k) {
         int MOD = 1_000_000_007;
 
-        // pair: [efficiency, speed]
+        // engineer[i] = {efficiency, speed}
         int[][] eng = new int[n][2];
         for (int i = 0; i < n; i++) {
             eng[i][0] = efficiency[i];
@@ -27,6 +28,7 @@ class Solution {
             minHeap.add(spd);
             speedSum += spd;
 
+            // keep only k speeds
             if (minHeap.size() > k) {
                 speedSum -= minHeap.poll();
             }
@@ -35,5 +37,16 @@ class Solution {
         }
 
         return (int) (maxPerf % MOD);
+    }
+
+    // ---------- MAIN METHOD ----------
+    public static void main(String[] args) {
+        int n = 6;
+        int[] speed = {2, 10, 3, 1, 5, 8};
+        int[] efficiency = {5, 4, 3, 9, 7, 2};
+        int k = 2;
+
+        int result = maxPerformance(n, speed, efficiency, k);
+        System.out.println("Maximum Performance = " + result);
     }
 }

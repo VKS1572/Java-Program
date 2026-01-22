@@ -1,0 +1,46 @@
+import java.util.*;
+
+public class Solution {
+    public int minimumPairRemoval(int[] nums) {
+        int operations = 0;
+
+        while (!isSorted(nums)) {
+            int minSum = Integer.MAX_VALUE;
+            int index = -1;
+
+            // Find leftmost pair with minimum sum
+            for (int i = 0; i < nums.length - 1; i++) {
+                int sum = nums[i] + nums[i + 1];
+                if (sum < minSum) {
+                    minSum = sum;
+                    index = i;
+                }
+            }
+
+            // Merge the pair at index by replacing with their sum
+            List<Integer> newNums = new ArrayList<>();
+            for (int i = 0; i < nums.length; i++) {
+                if (i == index) {
+                    newNums.add(nums[i] + nums[i + 1]);
+                    i++; // skip next element since it's merged
+                } else {
+                    newNums.add(nums[i]);
+                }
+            }
+
+            // Convert list back to array
+            nums = newNums.stream().mapToInt(i -> i).toArray();
+            operations++;
+        }
+
+        return operations;
+    }
+
+    // Helper to check if array is non-decreasing
+    private boolean isSorted(int[] nums) {
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] < nums[i - 1]) return false;
+        }
+        return true;
+    }
+}

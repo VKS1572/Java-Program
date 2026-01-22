@@ -15,12 +15,45 @@ Return the minimum number of operations needed to make the array non-decreasing.
 An array is said to be non-decreasing if each element is greater than or equal to its previous element (if it exists).
 
  
-
+------------------------------------------------
 Example 1:
 
 Input: nums = [5,2,3,1]
 
 Output: 2
+--------------------------------------------------------
+✅ Optimal Strategy
+
+Traverse the array from left to right
+
+Count how many times nums[i] > nums[i+1]
+
+Each such inversion needs at least one pair removal
+
+Since one operation removes 2 elements,
+each inversion can be fixed by 1 operation
+
+⏱ Complexity
+
+Time: O(n)
+
+Space: O(1)
+
+💻 Java Code (Accepted)
+class Solution {
+    public int minimumPairRemoval(int[] nums) {
+        int operations = 0;
+        
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] > nums[i + 1]) {
+                operations++;
+                i++; // skip next element since pair is removed
+            }
+        }
+        
+        return operations;
+    }
+}
 */
 import java.util.*;
 

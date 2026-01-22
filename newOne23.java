@@ -39,21 +39,7 @@ Time: O(n)
 
 Space: O(1)
 
-💻 Java Code (Accepted)
-class Solution {
-    public int minimumPairRemoval(int[] nums) {
-        int operations = 0;
-        
-        for (int i = 0; i < nums.length - 1; i++) {
-            if (nums[i] > nums[i + 1]) {
-                operations++;
-                i++; // skip next element since pair is removed
-            }
-        }
-        
-        return operations;
-    }
-}
+
 */
 import java.util.*;
 

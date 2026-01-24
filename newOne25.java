@@ -10,6 +10,12 @@ Subtract current node value from targetSum
 If we reach a leaf node, check if remaining sum is 0
 
 Otherwise, recursively check left and right subtree
+
+⏱️ Complexity
+
+Time: O(n) (visit each node once)
+
+Space: O(h) (recursion stack, h = tree height)
 */
 class Solution {
     public boolean hasPathSum(TreeNode root, int targetSum) {

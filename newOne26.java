@@ -1,3 +1,19 @@
+/*
+🧠 Problem Summary
+
+Given an integer numRows, return the first numRows of Pascal’s Triangle.
+
+Rule:
+Each number is the sum of the two numbers directly above it.
+
+✅ Approach
+
+Use a List<List<Integer>> to store the triangle.
+
+First and last elements of every row are 1.
+
+Middle elements are calculated using the previous row:
+*/
 import java.util.*;
 
 class Solution {

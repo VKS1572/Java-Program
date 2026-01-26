@@ -1,3 +1,15 @@
+/*
+🔍 Problem Summary
+
+You’re given an integer array arr.
+Steps:
+
+Sort the array
+
+Find the minimum absolute difference between any two elements
+
+Return all pairs having that minimum difference (in ascending order)
+*/
 import java.util.*;
 
 class Solution {

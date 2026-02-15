@@ -1,4 +1,4 @@
-LeetCode 67 — Add Binary (Java Solution) on LeetCode
+/*LeetCode 67 — Add Binary (Java Solution) on LeetCode
 
 You’re given two binary strings a and b. Return their sum as a binary string.
 
@@ -15,6 +15,7 @@ Update carry each step.
 Reverse at the end.
 
 ✅ Java Code
+    */
 class Solution {
     public String addBinary(String a, String b) {
         StringBuilder res = new StringBuilder();

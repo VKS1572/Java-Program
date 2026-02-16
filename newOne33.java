@@ -1,4 +1,4 @@
-LeetCode 190 — Reverse Bits (Java Solution)
+/*LeetCode 190 — Reverse Bits (Java Solution)
 Problem: Reverse bits of a given 32-bit unsigned integer.
 
 You’re given an integer and need to reverse its binary bits and return the resulting number.
@@ -18,7 +18,7 @@ Right shift n to process next bit.
 Time: O(1) (always 32 iterations)
 Space: O(1)
 
-✅ Java Solution
+✅ Java Solution*/
 public class Solution {
     public int reverseBits(int n) {
         int result = 0;

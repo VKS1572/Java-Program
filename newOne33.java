@@ -32,11 +32,11 @@ public class Solution {
         return result;
     }
 }
-
+/*
 🔍 Key Points
 
 Use >>> (unsigned right shift) instead of >> to avoid sign extension.
 
 (n & 1) extracts the last bit.
 
-Works correctly for both positive and negative integers (treated as unsigned bits).
+Works correctly for both positive and negative integers (treated as unsigned bits).*/

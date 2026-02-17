@@ -1,4 +1,4 @@
-LeetCode 401 — Binary Watch (Java Solution) — on LeetCode
+/* LeetCode 401 — Binary Watch (Java Solution) — on LeetCode
 A binary watch has:
 
 
@@ -24,7 +24,7 @@ If total set bits == turnedOn, format and add time to result.
 Ensure minutes are 2-digit formatted.
 
 
-✅ Java Solution
+✅ Java Solution*/
 import java.util.*;
 
 class Solution {
@@ -43,7 +43,7 @@ class Solution {
     }
 }
 
-⏱ Complexity
+/*⏱ Complexity
 
 
 Time: O(12 × 60) ≈ O(1) (constant search space)

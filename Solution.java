@@ -83,3 +83,23 @@ a palindrome, 321 is not) A number is called a palindrome if the number is equal
  of a number e.g., 121 is a palindrome because the reverse of 121 is 121 itself. On the other hand, 321 is not a 
 palindrome because the reverse of 321 is 123, which is not equal to 321.
  */
+//Palindrone no.
+class Solution {
+    public boolean isPalindrome(int x) {
+        // Special cases:
+        if (x < 0 || (x % 10 == 0 && x != 0)) {
+            return false;
+        }
+
+        int reversedHalf = 0;
+        while (x > reversedHalf) {
+            reversedHalf = reversedHalf * 10 + x % 10;
+            x /= 10;
+        }
+
+        // When length is even -> x == reversedHalf
+        // When length is odd -> x == reversedHalf/10
+        return x == reversedHalf || x == reversedHalf / 10;
+    }
+}
+

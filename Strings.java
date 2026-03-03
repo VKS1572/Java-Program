@@ -132,6 +132,7 @@ public class Strings {
     }
 }
 */
+/*
 public class Strings {
 
      public static String compress(String str) {
@@ -155,7 +156,7 @@ public class Strings {
 }
 
 }
-
+*/
 # Intuition
 <!-- Describe your first thoughts on how to solve this problem. -->
 
@@ -193,3 +194,4 @@ class Solution {
 }
 
 ```
+

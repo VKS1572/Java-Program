@@ -295,3 +295,29 @@ current = (current << 1) | node.val;
 
 This is slightly more optimal and shows strong binary understanding — good for interviews 🔥
 */        
+/*
+//66 plus one
+import java.util.Arrays;
+
+public class Solution {
+    public static int[] plusOne(int[] digits) {
+        int n = digits.length;
+
+        for (int i = n - 1; i >= 0; i--) {
+            if (digits[i] < 9) {
+                digits[i]++;
+                return digits;
+            }
+            digits[i] = 0;
+        }
+
+        // If all digits were 9
+        int[] res = new int[n + 1];
+        res[0] = 1;
+        return res;
+    }
+
+   
+}
+
+*/

@@ -226,7 +226,7 @@ class ProductArray {
 
 Time Complexity: O(n)
 */
-// 217 leetcode contain duplicate 
+/* 217 leetcode contain duplicate 
 class Solution {
     public boolean containsDuplicate(int[] nums) {
         HashSet <Integer> set = new HashSet<>();
@@ -240,6 +240,7 @@ class Solution {
         return false;
     }
 }
+*/
 
 /*242 valid anagram
 
@@ -262,4 +263,5 @@ class Solution {
         return true;
     }
 }*/
+
 

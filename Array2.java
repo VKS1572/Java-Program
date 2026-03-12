@@ -160,7 +160,7 @@ class Solution {
     }
 }
 
-//Array 2 pointer Short colors
+/*Array 2 pointer Short colors
 class Solution {
     public void sortColors(int[] nums) {
         int low = 0;          // for 0
@@ -189,7 +189,7 @@ class Solution {
         }
     }
 }
-
+*/
 /*
 3. Product of Array Except Self
 
@@ -284,5 +284,19 @@ class Solution {
 }
 
 */
+//27. Remove Element
+class Solution {
+    public int removeElement(int[] nums, int val) {
+        int k = 0;
+        for(int i= 0; i< nums.length;i++){
+            if(nums[i] != val){
+                nums[k]= nums[i];
+                k++;
+            }
+        }
+        return k;
+    }
+}
+
 
 

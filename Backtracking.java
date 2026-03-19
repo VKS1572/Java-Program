@@ -163,3 +163,31 @@ public class Backtracking {
     }
 }
 */
+
+//subset
+class Solution {
+
+    public List<List<Integer>> subsets(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
+        findSubsets(0, nums, new ArrayList<>(), result);
+        return result;
+    }
+
+    private void findSubsets(int index, int[] nums, List<Integer> current, List<List<Integer>> result) {
+        if (index == nums.length) {
+            result.add(new ArrayList<>(current));
+            return;
+        }
+
+        // Include nums[index]
+        current.add(nums[index]);
+        findSubsets(index + 1, nums, current, result);
+
+        // Backtrack (remove last added element)
+        current.remove(current.size() - 1);
+
+        // Exclude nums[index]
+        findSubsets(index + 1, nums, current, result);
+    }
+}
+

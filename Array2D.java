@@ -188,3 +188,56 @@ class Solution {
         return grid;
     }
 }
+
+//LeetCode 1886 – Determine Whether Matrix Can Be Obtained By Rotation ✅
+
+//Idea
+
+//You can rotate the matrix 0°, 90°, 180°, 270° and check if it equals target.
+
+//👉 If any rotation matches → return true
+
+class Solution {
+    public boolean findRotation(int[][] mat, int[][] target) {
+        for (int i = 0; i < 4; i++) {
+            if (match(mat, target)) return true;
+            rotate(mat);
+        }
+        return false;
+    }
+
+    private void rotate(int[][] mat) {
+        int n = mat.length;
+
+        // transpose
+        for (int i = 0; i < n; i++) {
+            for (int j = i; j < n; j++) {
+                int temp = mat[i][j];
+                mat[i][j] = mat[j][i];
+                mat[j][i] = temp;
+            }
+        }
+
+        // reverse rows
+        for (int i = 0; i < n; i++) {
+            int l = 0, r = n - 1;
+            while (l < r) {
+                int temp = mat[i][l];
+                mat[i][l] = mat[i][r];
+                mat[i][r] = temp;
+                l++;
+                r--;
+            }
+        }
+    }
+
+    private boolean match(int[][] a, int[][] b) {
+        int n = a.length;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (a[i][j] != b[i][j]) return false;
+            }
+        }
+        return true;
+    }
+}

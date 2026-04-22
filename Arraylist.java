@@ -223,5 +223,31 @@ public class Arraylist {
         System.out.println("Maximum water area: " + result);
     }
 }
+/*
 
+//525. Contiguous Array
+
+class Solution {
+    public int findMaxLength(int[] nums) {
+        Map<Integer, Integer> map = new HashMap<>();
+        map.put(0, -1); // sum 0 seen before starting
+
+        int sum = 0;
+        int maxLen = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            sum += (nums[i] == 0) ? -1 : 1;
+
+            if (map.containsKey(sum)) {
+                maxLen = Math.max(maxLen, i - map.get(sum));
+            } else {
+                map.put(sum, i); // store first index of this sum
+            }
+        }
+
+        return maxLen;
+    }
+}
+
+*/
         

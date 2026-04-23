@@ -121,7 +121,7 @@ public class Array2 {
 }
 */
 
-/* 
+/* .........................................
 public class Array2 {
   public static int buyAndsellStock(int prices[]){
   int maxprofit = 0;
@@ -144,10 +144,10 @@ return maxprofit;
   }
 
 }*/
-/*27. Remove Element
+/*27. Remove Element..........................................................
 Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. 
 The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.*/
-class Solution {
+/* Solution {
     public int removeElement(int[] nums, int val) {
         int k = 0;
         for(int i = 0; i<nums.length;i++){
@@ -158,7 +158,7 @@ class Solution {
         }
         return k;
     }
-}
+} */
 
 /*Array 2 pointer Short colors
 class Solution {
